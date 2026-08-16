@@ -1,0 +1,102 @@
+:root {
+  --bg-deep: #05060a;
+  --bg-panel: #0c0f18;
+  --gold: #e3c185;
+  --gold-soft: #c9a86a;
+  --cream: #f3ecdf;
+  --cream-dim: rgba(243, 236, 223, 0.65);
+  --line: rgba(227, 193, 133, 0.25);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-deep);
+  color: var(--cream);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+.display {
+  font-family: 'Italiana', serif;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+.label {
+  font-family: 'Manrope', sans-serif;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  color: var(--gold);
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--bg-deep);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-deep);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gold-soft);
+  border-radius: 4px;
+}
+
+button {
+  font-family: 'Manrope', sans-serif;
+  cursor: pointer;
+}
+
+section {
+  position: relative;
+  width: 100%;
+}
+
+.clip-wrap {
+  display: block;
+  overflow: hidden;
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: translate(-50%, -50%) scale(1.08);
+  }
+}
+
+@keyframes floatGold {
+  0% {
+    opacity: 0.6;
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-80px) rotate(180deg);
+  }
+}
