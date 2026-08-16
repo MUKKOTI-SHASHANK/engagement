@@ -6,7 +6,7 @@ A private, animated engagement celebration site — built with Vue 3 + Three.js 
 
 Open `src/config.js` and edit:
 
-- `password` — the gate password (currently `19082024`, your anniversary date)
+- `password` — the gate password (currently `your first message date`, your anniversary date)
 - `yourName` / `herName`
 - `heroTitle` / `heroSubtitle`
 - `timeline` — your story. For each entry, add a photo to `public/photos/` and
