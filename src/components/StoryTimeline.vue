@@ -3,6 +3,7 @@ import { onMounted, onBeforeUnmount, ref } from 'vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { config } from '../config.js'
+import { withBase } from '../assetPath.js'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -85,7 +86,7 @@ onMounted(() => {
       >
         <div class="photo-frame">
           <div class="ring"></div>
-          <img :src="item.photo" :alt="item.date" />
+          <img :src="withBase(item.photo)" :alt="item.date" />
         </div>
         <div class="clip-wrap">
           <p class="label">{{ item.date }}</p>

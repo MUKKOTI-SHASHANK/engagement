@@ -3,6 +3,7 @@ import { ref, onMounted, computed } from 'vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { config } from '../config.js'
+import { withBase } from '../assetPath.js'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -91,7 +92,7 @@ onMounted(() => {
         <audio
           v-if="config.voiceMessage"
           class="voice-message"
-          :src="config.voiceMessage"
+          :src="withBase(config.voiceMessage)"
           controls
         ></audio>
       </div>
